@@ -83,12 +83,12 @@
 (setq org-capture-templates
       (quote (("i" "Internetkauf" entry
                (file+headline "~/org/org.org" "Projekte")
-               (file "~/org/template_internetkauf.org"))
+               (file "~/org/capture-templates/template_internetkauf.org"))
               ("n" "Notiz" entry (file "~/org/inbox.org")
-               (file "~/org/template_task.org"))
+               (file "~/org/capture-templates/template_task.org"))
               ("b" "Buchkauf" entry
                (file+headline "~/org/org.org" "Projekte")
-               (file "~/org/template_buchkauf.org")))))
+               (file "~/org/capture-templates/template_buchkauf.org")))))
 
 (setq org-confirm-babel-evaluate nil)
 
