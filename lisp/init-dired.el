@@ -1,4 +1,6 @@
 (require-package 'dired+)
+(require-package 'dired-details)
+(require-package 'dired-details+)
 
 (setq diredp-hide-details-initially-flag nil)
 
@@ -11,5 +13,26 @@
   (add-hook 'dired-mode-hook
             (lambda () (guide-key/add-local-guide-key-sequence "%"))))
 
+(add-hook 'dired-load-hook
+          (lambda ()
+                      (load "dired-x")
+                      ;; Set global variables here.  For example:
+                      ;; (setq dired-guess-shell-gnutar "gtar")
+                      ))
+
+(require 'dired-details+)
+(setq dired-details-hidden-string "")
+(setq dired-dwim-target t)
+(setq dired-load-hook (quote ((lambda nil (load "dired-x")))))
+;(setq dired-mode-hook (quote (cscope:hook dired-extra-startup dired-omit-mode)))
+
+(put 'dired-find-alternate-file 'disabled nil)
+
+(defun dired-mode-keys ()
+  "Modify keymaps used by `dired-mode'."
+  (local-set-key (kbd "<tab>") 'dired-hide-subdir)
+  (local-set-key (kbd "<backtab>") 'dired-hide-all))
+
+(add-hook 'dired-mode-hook 'dired-mode-keys)
 
 (provide 'init-dired)

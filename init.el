@@ -43,6 +43,7 @@
 (require 'init-gui-frames)
 (require 'init-proxies)
 (require 'init-dired)
+(require 'init-openwith)
 (require 'init-isearch)
 (require 'init-uniquify)
 (require 'init-ibuffer)
@@ -56,6 +57,8 @@
 (require 'init-sessions)
 (require 'init-fonts)
 (require 'init-mmm)
+(require 'init-buf-move)
+(require 'init-windmove)
 
 (require 'init-editing-utils)
 
@@ -86,6 +89,9 @@
 (require 'init-lisp)
 (require 'init-slime)
 (require 'init-clojure)
+
+(require 'init-calendar)
+
 (when (>= emacs-major-version 24)
   (require 'init-clojure-cider))
 (require 'init-common-lisp)
