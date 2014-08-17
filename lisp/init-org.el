@@ -78,20 +78,7 @@
         ("r" "Reading / self studying projects" tags "read+TODO=\"NEXT\"" nil))))
 
 (setq org-agenda-files
-      (quote ("~/org/list-ausgeliehen-verliehen.org"
-              "~/org/list-texts.org"
-              "~/org/list-videos.org"
-              "~/org/life.org"
-              "~/org/learn-selfManagement.org"
-              "~/org/rtb-postgresql-server.org"
-              "~/org/rtb-legacySystem.org"
-              "~/org/learn-softwareEngineering.org"
-              "~/org/learn-pgsql.org"
-              "~/Dokumente/studium/StudienarbeitsDateien/Studienarbeit/doc/studienarbeit.org"
-              "~/Dokumente/studium/StudienarbeitsDateien/Studienarbeit/doc/studienarbeit-doc.org"
-              "~/da/doc/da.org"
-              "~/org/rtb-topoampel.org"
-              "~/org/rtb-allgemein.org")))
+      (quote ("~/org")))
 
 (setq org-capture-templates
       (quote (("i" "Internetkauf" entry
