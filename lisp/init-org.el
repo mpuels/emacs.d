@@ -211,7 +211,7 @@
       org-completion-use-ido t
       org-edit-timestamp-down-means-later t
       org-agenda-start-on-weekday 1
-      org-agenda-span 14
+      org-agenda-span 7
       org-agenda-include-diary t
       org-agenda-window-setup 'current-window
       org-fast-tag-selection-single-key 'expert
