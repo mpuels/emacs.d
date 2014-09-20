@@ -3,6 +3,7 @@
 (require-package 'dired-details+)
 
 (setq diredp-hide-details-initially-flag nil)
+(setq dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\..+$")
 
 (after-load 'dired
   (require 'dired+)
