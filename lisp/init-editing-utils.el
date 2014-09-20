@@ -350,5 +350,8 @@ With arg N, insert N newlines."
 (guide-key-mode 1)
 (diminish 'guide-key-mode)
 
+;; Prevent problem of dead keys on german keyboards.
+;; http://lists.gnu.org/archive/html/help-gnu-emacs/2009-05/msg00179.html
+(require 'iso-transl)
 
 (provide 'init-editing-utils)
