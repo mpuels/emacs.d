@@ -4,6 +4,7 @@
 
 (setq diredp-hide-details-initially-flag nil)
 (setq dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\..+$")
+(setq dired-listing-switches "-al --group-directories-first")
 
 (after-load 'dired
   (require 'dired+)

@@ -10,4 +10,6 @@
               ("\\.odt\\'" "libreoffice" (file))
               ("\\.wav\\'" "play" (file)))))
 
+(openwith-mode t)
+
 (provide 'init-openwith)
