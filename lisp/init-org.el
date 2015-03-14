@@ -72,6 +72,7 @@
           (org-agenda-tag-filter-preset (quote ("-tickle"))))
          ("~/org/org2hpda/org-agenda.ics"))
         ("h" "NEXT @heim" tags "@heim+TODO=\"NEXT\"" nil)
+        ("N" "NEXT -@rtb" tags "-@rtb+TODO=\"NEXT\"" nil)
         ("b" "NEXT besorgung" tags "besorgung+TODO=\"NEXT\"" nil)
         ("w" "WAITING" tags "TODO=\"WAITING\"" nil)
         ("g" "Texts about postgresql" tags "read+pgsql+TODO=\"NEXT\"" nil)
@@ -293,6 +294,7 @@
 ;;                   (re-search-backward "^[0-9]+:[0-9]+-[0-9]+:[0-9]+ " nil t))
 ;;                 (insert (match-string 0))))))
 
+(setq org-mobile-directory "~/Dropbox/org-mobile")
 
 (after-load 'org
   (define-key org-mode-map (kbd "C-M-<up>") 'org-up-element)
