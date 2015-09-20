@@ -211,9 +211,9 @@
 (setq org-log-done t
       org-completion-use-ido t
       org-edit-timestamp-down-means-later t
-      org-agenda-start-on-weekday 1
-      org-agenda-span 7
-      org-agenda-include-diary nil
+      org-agenda-start-on-weekday nil
+      org-agenda-span 14
+      org-agenda-include-diary t
       org-agenda-window-setup 'current-window
       org-fast-tag-selection-single-key 'expert
       org-export-kill-product-buffer-when-displayed t
@@ -238,7 +238,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Save the running clock and all clock history when exiting Emacs, load it on startup
-(setq org-clock-persistence-insinuate t)
+(org-clock-persistence-insinuate)
 (setq org-clock-persist t)
 (setq org-clock-in-resume t)
 

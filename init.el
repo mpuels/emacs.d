@@ -2,9 +2,11 @@
 ;;; This file bootstraps the configuration, which is divided into
 ;;; a number of other files.
 
-(let ((minver 23))
-  (unless (>= emacs-major-version minver)
+(let ((minver "23.3"))
+  (when (version<= emacs-version "23.1")
     (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
+(when (version<= emacs-version "24")
+  (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (require 'init-benchmarking) ;; Measure startup time
@@ -15,9 +17,11 @@
 ;;----------------------------------------------------------------------------
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (require 'init-compat)
 (require 'init-utils)
 (require 'init-site-lisp) ;; Must come before elpa, as it may provide package.el
+;; Calls (package-initialize)
 (require 'init-elpa)      ;; Machinery for installing required packages
 (require 'init-exec-path) ;; Set up $PATH
 
@@ -48,6 +52,7 @@
 (require 'init-dired)
 (require 'init-openwith)
 (require 'init-isearch)
+(require 'init-grep)
 (require 'init-uniquify)
 (require 'init-ibuffer)
 (require 'init-flycheck)
@@ -68,9 +73,10 @@
 
 (require 'init-vc)
 (require 'init-darcs)
-;;(require 'init-git)
-;;(require 'init-github)
+(require 'init-git)
+(require 'init-github)
 
+(require 'init-compile)
 (require 'init-crontab)
 (require 'init-textile)
 (require 'init-markdown)
@@ -92,11 +98,11 @@
 (require 'init-paredit)
 (require 'init-lisp)
 (require 'init-slime)
-(require 'init-clojure)
 
 (require 'init-calendar)
 
 (when (>= emacs-major-version 24)
+  (require 'init-clojure)
   (require 'init-clojure-cider))
 (require 'init-common-lisp)
 
@@ -129,7 +135,6 @@
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
 ;;----------------------------------------------------------------------------
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))
 
