@@ -42,6 +42,9 @@
 (require 'init-osx-keys)
 (require 'init-gui-frames)
 (require 'init-proxies)
+
+(require 'init-popwin)
+(require 'init-guide-key)
 (require 'init-dired)
 (require 'init-openwith)
 (require 'init-isearch)
@@ -59,13 +62,14 @@
 (require 'init-mmm)
 (require 'init-buf-move)
 (require 'init-windmove)
+(require 'init-window-number)
 
 (require 'init-editing-utils)
 
 (require 'init-vc)
 (require 'init-darcs)
-(require 'init-git)
-(require 'init-github)
+;;(require 'init-git)
+;;(require 'init-github)
 
 (require 'init-crontab)
 (require 'init-textile)
