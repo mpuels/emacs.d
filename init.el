@@ -61,7 +61,7 @@
 (require 'init-ido)
 (require 'init-hippie-expand)
 (require 'init-auto-complete)
-(require 'init-windows)
+;;(require 'init-windows) ;; Interfers with my keyboard shortcuts.
 (require 'init-sessions)
 (require 'init-fonts)
 (require 'init-mmm)
@@ -73,8 +73,8 @@
 
 (require 'init-vc)
 (require 'init-darcs)
-(require 'init-git)
-(require 'init-github)
+;;(require 'init-git)
+;;(require 'init-github)
 
 (require 'init-compile)
 (require 'init-crontab)
@@ -109,7 +109,7 @@
 (when *spell-check-support-enabled*
   (require 'init-spelling))
 
-(require 'init-marmalade)
+;;(require 'init-marmalade)
 (require 'init-misc)
 
 (require 'init-dash)
