@@ -1,3 +1,8 @@
+;;; package -- Summary
+
+;;; Commentary:
+
+;;; Code:
 (require-package 'haskell-mode)
 
 
@@ -105,4 +110,8 @@
   (define-key interactive-haskell-mode-map (kbd "M-P") 'haskell-goto-prev-error))
 
 
+;; Hasktags
+;;(custom-set-variables '(haskell-tags-on-save t))
+
 (provide 'init-haskell)
+;;; init-haskell.el ends here

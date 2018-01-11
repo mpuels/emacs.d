@@ -1,6 +1,9 @@
 (when (< emacs-major-version 24)
   (require-package 'org))
 (require-package 'org-fstree)
+(require-package 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(add-hook 'org-mode-hook (lambda () (variable-pitch-mode t)))
 (when *is-a-mac*
   (require-package 'org-mac-link)
   (autoload 'org-mac-grab-link "org-mac-link" nil t)
@@ -22,10 +25,10 @@
   (load-library "reftex")
   (and (buffer-file-name) (file-exists-p (buffer-file-name))
        (progn
-         ;enable auto-revert-mode to update reftex when bibtex file changes on disk
+                                        ;enable auto-revert-mode to update reftex when bibtex file changes on disk
          (global-auto-revert-mode t)
          (reftex-parse-all)
-         ;add a custom reftex cite format to insert links
+                                        ;add a custom reftex cite format to insert links
          (reftex-set-cite-format
           '((?b . "[[bib:%l]]")
             (?n . "[[note:%l]]")
@@ -231,7 +234,6 @@
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "STARTED(s)" "|" "DONE(d!/!)")
               (sequence "WAITING(w@/!)" "SOMEDAY(S)" "|" "CANCELLED(c@/!)"))))
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Org clock

@@ -7,5 +7,6 @@
 
   (setq flycheck-display-errors-function #'flycheck-display-error-messages-unless-error-list))
 
+(setq flycheck-c/c++-clang-executable "/usr/bin/clang-3.6")
 
 (provide 'init-flycheck)

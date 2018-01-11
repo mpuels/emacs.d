@@ -1,6 +1,6 @@
 
 ;;; This file bootstraps the configuration, which is divided into
-;;; a number of other files.
+;;; a number of other files. tensorflow_p36
 
 (let ((minver "23.3"))
   (when (version<= emacs-version "23.1")
@@ -62,6 +62,9 @@
 (require 'init-hippie-expand)
 (require 'init-auto-complete)
 ;;(require 'init-windows) ;; Interfers with my keyboard shortcuts.
+(require 'init-irony)
+(require 'init-company-irony)
+(require 'init-winner)
 (require 'init-sessions)
 (require 'init-fonts)
 (require 'init-mmm)
@@ -94,6 +97,7 @@
 (require 'init-ruby-mode)
 (require 'init-rails)
 (require 'init-sql)
+(require 'init-latex)
 
 (require 'init-paredit)
 (require 'init-lisp)
