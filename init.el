@@ -80,7 +80,7 @@
 ;;(require 'init-github)
 
 (require 'init-compile)
-(require 'init-crontab)
+;;(require 'init-crontab)
 (require 'init-textile)
 (require 'init-markdown)
 (require 'init-csv)
