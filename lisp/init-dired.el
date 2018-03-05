@@ -1,7 +1,8 @@
-(require-package 'dired+)
-(require-package 'dired-sort)
-(require-package 'dired-details)
-(require-package 'dired-details+)
+;; The following 'load'ed packages are no longer available on melpa.org.
+(load "~/.emacs.d/site-lisp/dired+")
+(load "~/.emacs.d/site-lisp/dired-sort.el")
+(load "~/.emacs.d/site-lisp/dired-details.el")
+(load "~/.emacs.d/site-lisp/dired-details+.el")
 
 (setq-default diredp-hide-details-initially-flag nil
               dired-dwim-target t)
