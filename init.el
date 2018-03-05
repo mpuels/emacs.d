@@ -83,6 +83,7 @@
 ;;(require 'init-crontab)
 (require 'init-textile)
 (require 'init-markdown)
+(require 'init-flymd)
 (require 'init-csv)
 (require 'init-erlang)
 (require 'init-javascript)
@@ -98,6 +99,7 @@
 (require 'init-rails)
 (require 'init-sql)
 (require 'init-latex)
+(require 'init-terraform)
 
 (require 'init-paredit)
 (require 'init-lisp)
